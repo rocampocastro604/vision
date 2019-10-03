@@ -104,7 +104,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         var _this = this;
-        this.title = 'TF-ObjectDetection';
+        this.title = 'OptiCart';
         this.detectFrame = function (video, model) {
             model.detect(video).then(function (predictions) {
                 _this.renderPredictions(predictions);
@@ -145,6 +145,7 @@ var AppComponent = /** @class */ (function () {
                 // Draw the text last to ensure it's on top.
                 ctx.fillStyle = "#000000";
                 ctx.fillText(prediction.class, x, y);
+                alert(prediction)
             });
         };
     }
