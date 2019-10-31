@@ -90,25 +90,31 @@ webcam_init()
     predictions.forEach(prediction => {
       const x = prediction.bbox[0];
       const y = prediction.bbox[1];
-      var pred_cont = 0;
+      var cont_bottle = 0;
+      var cont_person = 0;
       // Draw the text last to ensure it's on top.
       ctx.fillStyle = "#000000";
       ctx.fillText(prediction.class, x, y);
   
       console.log(prediction.class);
-      if (pred_cont = 50){
-        console.log(prediction.class)
-        //pred_cont = pred_cont+1;
-        if(prediction.class == "person"){
-          window.location.href = "https://opticart.000webhostapp.com/?product=queso";
-          
-        }else if (prediction.class == "bottle") {
-          window.location.href = "https://opticart.000webhostapp.com/?product=carton-de-leche";
+      if (prediction.class == "bottle"){
+        //console.log(prediction.class)
+        cont_bottle = cont_bottle + 1;
+        console.log(cont_bottle);
+        if(cont_bottle = 25){
+          window.location.href = "https://www.google.com/search?q=cheese&rlz=1C1CHZL_esCO698CO698&sxsrf=ACYBGNRin_ABRQth9cNE4ctO9QApniP4pw:1572542172355&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi5h8-MgMflAhWorFkKHVI_BYYQ_AUIEigB&biw=1280&bih=648";
+          //"https://opticart.000webhostapp.com/?product=carton-de-leche";
+        }
+      }else if(prediction.class == "person"){
+        cont_person = cont_person + 1;
+        console.log(cont_person); 
+        if (cont_person = 25) {
+          window.location.href = "https://www.google.com/search?q=milk&tbm=isch&ved=2ahUKEwj-vLmPgMflAhUCgVkKHeVKDu4Q2-cCegQIABAA&oq=milk&gs_l=img.3..0i67l7j0j0i67l2.11433.11861..12057...0.0..0.132.512.0j4......0....1..gws-wiz-img.......35i39.VDRVZfIfiVY&ei=4ha7Xf7DEYKC5gLllbnwDg&bih=648&biw=1280&rlz=1C1CHZL_esCO698CO698"; 
+          //"https://opticart.000webhostapp.com/?product=queso";
       }else{
-        console.log("Not sure")
+        console.log("Not sure");
       }
     });
   };
-
 
 }
