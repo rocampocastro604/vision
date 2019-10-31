@@ -111,10 +111,10 @@ webcam_init()
         if (cont_person = 25) {
           //window.location.href = "https://www.google.com/search?q=cheese&rlz=1C1CHZL_esCO698CO698&sxsrf=ACYBGNRin_ABRQth9cNE4ctO9QApniP4pw:1572542172355&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi5h8-MgMflAhWorFkKHVI_BYYQ_AUIEigB&biw=1280&bih=648";
           window.location.href = "https://opticart.000webhostapp.com/?product=queso";
-      }else{
-        console.log("Not sure");
-      };
-    });
-  };
-
+        }else{
+          console.log("Not sure");
+        };
+    };
+  });
+};
 }

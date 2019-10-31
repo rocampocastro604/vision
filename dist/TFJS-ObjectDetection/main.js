@@ -41,7 +41,7 @@ module.exports = "/* You can add styles to this file, and also import other styl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align:center\">\n  \n  <h1>OptiCart Demo</h1>\n  \n  <video hidden id=\"vid\" width=\"300\" height=\"300\"></video>\n  <canvas id=\"canvas\"></canvas>\n  <p id=\"eltexto\"></p>\n</div>\n\n\n\n"
+module.exports = "<div style=\"text-align:center\">\r\n  \r\n  <h1>OptiCart Demo</h1>\r\n  \r\n  <video hidden id=\"vid\" width=\"300\" height=\"300\"></video>\r\n  <canvas id=\"canvas\"></canvas>\r\n  <p id=\"eltexto\"></p>\r\n</div>\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -142,9 +142,34 @@ var AppComponent = /** @class */ (function () {
             predictions.forEach(function (prediction) {
                 var x = prediction.bbox[0];
                 var y = prediction.bbox[1];
+                var cont_bottle = 0;
+                var cont_person = 0;
                 // Draw the text last to ensure it's on top.
                 ctx.fillStyle = "#000000";
                 ctx.fillText(prediction.class, x, y);
+                console.log(prediction.class);
+                if (prediction.class == "bottle") {
+                    //console.log(prediction.class)
+                    cont_bottle = cont_bottle + 1;
+                    console.log(cont_bottle);
+                    if (cont_bottle = 25) {
+                        //window.location.href = "https://www.google.com/search?q=milk&tbm=isch&ved=2ahUKEwj-vLmPgMflAhUCgVkKHeVKDu4Q2-cCegQIABAA&oq=milk&gs_l=img.3..0i67l7j0j0i67l2.11433.11861..12057...0.0..0.132.512.0j4......0....1..gws-wiz-img.......35i39.VDRVZfIfiVY&ei=4ha7Xf7DEYKC5gLllbnwDg&bih=648&biw=1280&rlz=1C1CHZL_esCO698CO698"; 
+                        window.location.href = "https://opticart.000webhostapp.com/?product=carton-de-leche";
+                    }
+                }
+                else if (prediction.class == "cell phone") {
+                    cont_person = cont_person + 1;
+                    console.log(cont_person);
+                    if (cont_person = 25) {
+                        //window.location.href = "https://www.google.com/search?q=cheese&rlz=1C1CHZL_esCO698CO698&sxsrf=ACYBGNRin_ABRQth9cNE4ctO9QApniP4pw:1572542172355&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi5h8-MgMflAhWorFkKHVI_BYYQ_AUIEigB&biw=1280&bih=648";
+                        window.location.href = "https://opticart.000webhostapp.com/?product=queso";
+                    }
+                    else {
+                        console.log("Not sure");
+                    }
+                    ;
+                }
+                ;
             });
         };
     }
@@ -302,7 +327,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\riky_\OneDrive\Documentos\GitHub\vision\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\tolen\Documents\GitHub\vision\src\main.ts */"./src/main.ts");
 
 
 /***/ })
