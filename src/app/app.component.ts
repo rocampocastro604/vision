@@ -113,6 +113,7 @@ webcam_init()
           window.location.href = "https://opticart.000webhostapp.com/?product=queso";
         }else{
           console.log("Not sure");
+          //El no sabe como hacer branches
         };
     };
   });
