@@ -5772,7 +5772,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! c:\Users\riky_\Desktop\Projects\moua\TFJS-ObjectDetection-master\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! C:\Users\riky_\OneDrive\Documentos\GitHub\vision\src\polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })

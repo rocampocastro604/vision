@@ -41,7 +41,7 @@ module.exports = "/* You can add styles to this file, and also import other styl
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align:center\">\n  \n  <h1>Deteccion de objetos</h1>\n  \n  <video hidden id=\"vid\" width=\"300\" height=\"300\"></video>\n  <canvas id=\"canvas\"></canvas>\n\n</div>\n\n\n\n"
+module.exports = "<div style=\"text-align:center\">\n  \n  <h1>OptiCart Demo</h1>\n  \n  <video hidden id=\"vid\" width=\"300\" height=\"300\"></video>\n  <canvas id=\"canvas\"></canvas>\n  <p id=\"eltexto\"></p>\n</div>\n\n\n\n"
 
 /***/ }),
 
@@ -104,7 +104,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         var _this = this;
-        this.title = 'OptiCart';
+        this.title = 'TF-ObjectDetection';
         this.detectFrame = function (video, model) {
             model.detect(video).then(function (predictions) {
                 _this.renderPredictions(predictions);
@@ -145,7 +145,6 @@ var AppComponent = /** @class */ (function () {
                 // Draw the text last to ensure it's on top.
                 ctx.fillStyle = "#000000";
                 ctx.fillText(prediction.class, x, y);
-                alert(prediction)
             });
         };
     }
@@ -303,7 +302,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! c:\Users\riky_\Desktop\Projects\moua\TFJS-ObjectDetection-master\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\riky_\OneDrive\Documentos\GitHub\vision\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -25,6 +25,7 @@ public async predictWithCocoModel(){
   const model = await cocoSSD.load('lite_mobilenet_v2');
   this.detectFrame(this.video,model);
   console.log('model loaded');
+  
 }
 
 webcam_init()
@@ -89,9 +90,23 @@ webcam_init()
     predictions.forEach(prediction => {
       const x = prediction.bbox[0];
       const y = prediction.bbox[1];
+      var pred_cont = 0;
       // Draw the text last to ensure it's on top.
       ctx.fillStyle = "#000000";
       ctx.fillText(prediction.class, x, y);
+  
+      console.log(prediction.class);
+      if (prediction.class == "person"){
+        console.log(prediction.class)
+        //pred_cont = pred_cont+1;
+        if(pred_cont = 100){
+          window.location.href = "https://opticart.000webhostapp.com/";
+          
+      }else if (prediction.class == {
+        }
+      }else{
+        console.log("No persona")
+      }
     });
   };
 

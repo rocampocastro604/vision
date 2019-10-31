@@ -539,7 +539,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! c:\Users\riky_\Desktop\Projects\moua\TFJS-ObjectDetection-master\src\styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! C:\Users\riky_\OneDrive\Documentos\GitHub\vision\src\styles.css */"./src/styles.css");
 
 
 /***/ })
