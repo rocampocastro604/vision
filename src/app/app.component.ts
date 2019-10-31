@@ -96,16 +96,16 @@ webcam_init()
       ctx.fillText(prediction.class, x, y);
   
       console.log(prediction.class);
-      if (prediction.class == "person"){
+      if (pred_cont = 50){
         console.log(prediction.class)
         //pred_cont = pred_cont+1;
-        if(pred_cont = 100){
-          window.location.href = "https://opticart.000webhostapp.com/";
+        if(prediction.class == "person"){
+          window.location.href = "https://opticart.000webhostapp.com/?product=queso";
           
-      }else if (prediction.class == {
-        }
+        }else if (prediction.class == "bottle") {
+          window.location.href = "https://opticart.000webhostapp.com/?product=carton-de-leche";
       }else{
-        console.log("No persona")
+        console.log("Not sure")
       }
     });
   };
