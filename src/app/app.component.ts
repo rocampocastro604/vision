@@ -84,7 +84,7 @@ webcam_init()
       ctx.fillStyle = "#00FFFF";
       const textWidth = ctx.measureText(prediction.class).width;
       const textHeight = parseInt(font, 10); // base 10
-      ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
+      //ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
     });
 
     predictions.forEach(prediction => {
@@ -93,8 +93,8 @@ webcam_init()
       var cont_bottle = 0;
       var cont_person = 0;
       // Draw the text last to ensure it's on top.
-      ctx.fillStyle = "#000000";
-      ctx.fillText(prediction.class, x, y);
+      //ctx.fillStyle = "#00FFFF";
+      //ctx.fillText(prediction.class, x, y);
   
       console.log(prediction.class);
       if (prediction.class == "bottle"){
