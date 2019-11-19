@@ -130,11 +130,11 @@ var AppComponent = /** @class */ (function () {
                 var width = prediction.bbox[2];
                 var height = prediction.bbox[3];
                 // Draw the bounding box.
-                ctx.strokeStyle = "#00FFFF";
+                ctx.strokeStyle = "#00ff1a";
                 ctx.lineWidth = 2;
                 ctx.strokeRect(x, y, width, height);
                 // Draw the label background.
-                ctx.fillStyle = "#00FFFF";
+                ctx.fillStyle = "#00ff1a";
                 var textWidth = ctx.measureText(prediction.class).width;
                 var textHeight = parseInt(font, 10); // base 10
                 ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
